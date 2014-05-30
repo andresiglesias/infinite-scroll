@@ -1,0 +1,20 @@
+<%= hidden_field_tag 'page', "0" %>
+
+<h1>Infinite scroll</h1>
+<h2>by @andresiglesias</h2>
+<div id="posts" ></div>
+
+<div id='loading' class='message'>
+	<img src='assets/loading.gif' width='16' height='16' />
+	<p>Loading
+</div>
+<div id='message' class='message'></div>
+
+<script>
+	var taskFired = false;
+	$( document ).ready(function() {
+	  loadPosts(0);
+	  $(window).on("touchmove", scrollHandlerMobile);
+	  $(window).on("scroll", scrollHandler);
+	});
+</script>
