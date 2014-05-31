@@ -11,10 +11,10 @@ Add a hidden field and the following script in your view.
 ```
 
 ```js
-	var taskFired = false;
-	$( document ).ready(function() {
-	  loadAjax(0);
-	  $(window).on("touchmove", scrollHandlerMobile);
-	  $(window).on("scroll", scrollHandler);
-	});
+var taskFired = false;
+$( document ).ready(function() {
+  loadAjax(0);
+  $(window).on("touchmove", scrollHandlerMobile);
+  $(window).on("scroll", scrollHandler);
+});
 ```
