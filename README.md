@@ -4,11 +4,13 @@ Infinite scroll implementation in Ruby on Rails and jQuery.
 
 # Usage
 
-Add a hidden field and the following script in the view. 
+Add a hidden field and the following script in your view. 
+
+```html
+<%= hidden_field_tag 'page', "0" %>
+```
 
 ```js
-<%= hidden_field_tag 'page', "0" %>
-
 <script>
 	var taskFired = false;
 	$( document ).ready(function() {
