@@ -1,12 +1,12 @@
-== Infinite Scroll
+# Infinite Scroll
 
 Infinite scroll implementation in Ruby on Rails and jQuery.
 
-== Usage
+# Usage
 
 Add a hidden field and the following script in the view. 
 
-```ruby
+```js
 <%= hidden_field_tag 'page', "0" %>
 
 <script>
