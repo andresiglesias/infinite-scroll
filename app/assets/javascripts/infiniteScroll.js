@@ -7,7 +7,7 @@ function scrollBottom(offset){
 			$(window).off("touchmove", scrollHandlerMobile);
 			$(window).off("scroll", scrollHandler);
 			var page = $('#page').val();
-	        setTimeout(loadPosts(parseInt(page)+1), 1500);
+	        setTimeout(loadAjax(parseInt(page)+1), 1500);
 		}
     }
 }

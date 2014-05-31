@@ -1,4 +1,4 @@
-function loadPosts(page) {
+function loadAjax(page) {
 	
 	$('#message').hide();
 	
