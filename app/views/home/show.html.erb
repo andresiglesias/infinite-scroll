@@ -13,7 +13,7 @@
 <script>
 	var taskFired = false;
 	$( document ).ready(function() {
-	  loadAjax(0);
+	  loadAjax(0, "/get-posts", false);
 	  $(window).on("touchmove", scrollHandlerMobile);
 	  $(window).on("scroll", scrollHandler);
 	});

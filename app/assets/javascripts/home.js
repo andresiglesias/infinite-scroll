@@ -23,10 +23,14 @@ function loadAjax(page) {
 			if (result.posts != null){
 				
 				var html = "";
-				for (var i = 0; i < result.posts.length; i++){
-					j++;
-					html += "<div class='post'>"+result.posts[i]+"</div>";
+				var htmlList = generateHtml(result); 
+				
+				j = htmlList.length;
+				
+				for (var i = 0; i < htmlList.length; i++){
+					html += htmlList[i];
 				}
+				
 				$('#posts').append(html);
 				
 				if (j == 0) {
@@ -65,5 +69,13 @@ function loadAjax(page) {
 		
 	    }
 	});
+}
+
+function generateHtml(json) {
+	var html = [];
+	for (var i = 0; i < json.posts.length; i++){
+		html += ["<div class='post'>"+json.posts[i]+"</div>"];
+	}
+	return html;
 }
 
